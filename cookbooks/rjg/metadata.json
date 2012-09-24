@@ -1,30 +1,44 @@
 {
-  "version": "0.0.1",
-  "replacing": {
+  "platforms": {
   },
-  "groupings": {
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "attributes": {
+    "rjg/apache_package_name": {
+      "required": "optional",
+      "choice": [
+
+      ],
+      "default": "apache2",
+      "display_name": "Apache Package Name",
+      "type": "string",
+      "calculated": false,
+      "description": "An override for the apache package name",
+      "recipes": [
+        "rjg::helloworld"
+      ]
+    }
   },
-  "providing": {
-  },
-  "description": "Installs/Configures rjg",
   "conflicting": {
+  },
+  "suggestions": {
   },
   "recommendations": {
   },
-  "attributes": {
+  "license": "All rights reserved",
+  "maintainer_email": "me@ryangeyer.com",
+  "maintainer": "Ryan J. Geyer",
+  "name": "rjg",
+  "description": "Installs/Configures rjg",
+  "version": "0.0.1",
+  "providing": {
   },
   "dependencies": {
   },
-  "maintainer_email": "me@ryangeyer.com",
+  "replacing": {
+  },
   "recipes": {
     "rjg::helloworld": "Prints hello world"
   },
-  "platforms": {
-  },
-  "maintainer": "Ryan J. Geyer",
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "license": "All rights reserved",
-  "suggestions": {
-  },
-  "name": "rjg"
+  "groupings": {
+  }
 }
