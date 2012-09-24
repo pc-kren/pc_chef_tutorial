@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "replacing": {
+  },
+  "groupings": {
+  },
+  "providing": {
+  },
+  "description": "Installs/Configures rjg",
+  "conflicting": {
+  },
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "dependencies": {
+  },
+  "maintainer_email": "me@ryangeyer.com",
+  "recipes": {
+    "rjg::helloworld": "Prints hello world"
+  },
+  "platforms": {
+  },
+  "maintainer": "Ryan J. Geyer",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "license": "All rights reserved",
+  "suggestions": {
+  },
+  "name": "rjg"
+}
