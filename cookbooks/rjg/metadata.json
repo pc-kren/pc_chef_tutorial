@@ -1,59 +1,60 @@
 {
-  "replacing": {
-  },
-  "conflicting": {
-  },
-  "license": "All rights reserved",
   "recipes": {
-    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt",
+    "rjg::change_index": "Changes the /var/www/index.html content",
     "rjg::helloworld": "Prints hello world",
-    "rjg::change_index": "Changes the /var/www/index.html content"
+    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt"
   },
   "providing": {
   },
-  "recommendations": {
-  },
+  "license": "All rights reserved",
+  "version": "0.0.1",
   "description": "Installs/Configures rjg",
-  "suggestions": {
+  "replacing": {
   },
   "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "groupings": {
   },
   "attributes": {
     "rjg/my_name": {
-      "required": "required",
       "recipes": [
         "rjg::change_index"
       ],
+      "display_name": "My Name",
       "description": "My name for the index.html file",
       "type": "string",
+      "required": "required",
+      "calculated": false,
       "choice": [
 
-      ],
-      "display_name": "My Name",
-      "calculated": false
+      ]
     },
     "rjg/apache_package_name": {
-      "required": "optional",
       "recipes": [
         "rjg::helloworld"
       ],
+      "display_name": "Apache Package Name",
       "description": "An override for the apache package name",
-      "default": "apache2",
       "type": "string",
+      "required": "optional",
+      "calculated": false,
+      "default": "apache2",
       "choice": [
 
-      ],
-      "display_name": "Apache Package Name",
-      "calculated": false
+      ]
     }
+  },
+  "conflicting": {
+  },
+  "suggestions": {
+  },
+  "recommendations": {
   },
   "platforms": {
   },
-  "version": "0.0.1",
-  "groupings": {
-  },
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "maintainer_email": "me@ryangeyer.com",
   "maintainer": "Ryan J. Geyer",
-  "name": "rjg"
+  "name": "rjg",
+  "maintainer_email": "me@ryangeyer.com"
 }
