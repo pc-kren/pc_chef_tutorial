@@ -1,0 +1,11 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Hi, My name is <%= @name %></h1>
+<p>This server is running <%= node['platform'] %> Version <%= node['platform_version'] %></p>
+<p>I am virtualized using <%= node['virtualization']['system'] %></p>
+
+<p>I am a <%= node['ec2']['instance_type'] %></p>
+</body>
+</html>

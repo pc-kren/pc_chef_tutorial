@@ -1,45 +1,59 @@
 {
-  "providing": {
-  },
-  "name": "rjg",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "maintainer_email": "me@ryangeyer.com",
-  "license": "All rights reserved",
-  "description": "Installs/Configures rjg",
-  "recipes": {
-    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt",
-    "rjg::helloworld": "Prints hello world"
+  "replacing": {
   },
   "conflicting": {
   },
-  "dependencies": {
+  "license": "All rights reserved",
+  "recipes": {
+    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt",
+    "rjg::helloworld": "Prints hello world",
+    "rjg::change_index": "Changes the /var/www/index.html content"
   },
-  "version": "0.0.1",
+  "providing": {
+  },
+  "recommendations": {
+  },
+  "description": "Installs/Configures rjg",
   "suggestions": {
   },
-  "replacing": {
+  "dependencies": {
   },
-  "maintainer": "Ryan J. Geyer",
-  "platforms": {
-  },
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
   "attributes": {
-    "rjg/apache_package_name": {
+    "rjg/my_name": {
+      "required": "required",
+      "recipes": [
+        "rjg::change_index"
+      ],
+      "description": "My name for the index.html file",
+      "type": "string",
       "choice": [
 
       ],
-      "default": "apache2",
-      "display_name": "Apache Package Name",
-      "description": "An override for the apache package name",
-      "calculated": false,
+      "display_name": "My Name",
+      "calculated": false
+    },
+    "rjg/apache_package_name": {
       "required": "optional",
       "recipes": [
         "rjg::helloworld"
       ],
-      "type": "string"
+      "description": "An override for the apache package name",
+      "default": "apache2",
+      "type": "string",
+      "choice": [
+
+      ],
+      "display_name": "Apache Package Name",
+      "calculated": false
     }
-  }
+  },
+  "platforms": {
+  },
+  "version": "0.0.1",
+  "groupings": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "maintainer_email": "me@ryangeyer.com",
+  "maintainer": "Ryan J. Geyer",
+  "name": "rjg"
 }
