@@ -1,44 +1,45 @@
 {
+  "providing": {
+  },
+  "name": "rjg",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "maintainer_email": "me@ryangeyer.com",
+  "license": "All rights reserved",
+  "description": "Installs/Configures rjg",
+  "recipes": {
+    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt",
+    "rjg::helloworld": "Prints hello world"
+  },
+  "conflicting": {
+  },
+  "dependencies": {
+  },
+  "version": "0.0.1",
+  "suggestions": {
+  },
+  "replacing": {
+  },
+  "maintainer": "Ryan J. Geyer",
   "platforms": {
   },
   "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
   "attributes": {
     "rjg/apache_package_name": {
-      "required": "optional",
       "choice": [
 
       ],
       "default": "apache2",
       "display_name": "Apache Package Name",
-      "type": "string",
-      "calculated": false,
       "description": "An override for the apache package name",
+      "calculated": false,
+      "required": "optional",
       "recipes": [
         "rjg::helloworld"
-      ]
+      ],
+      "type": "string"
     }
-  },
-  "conflicting": {
-  },
-  "suggestions": {
-  },
-  "recommendations": {
-  },
-  "license": "All rights reserved",
-  "maintainer_email": "me@ryangeyer.com",
-  "maintainer": "Ryan J. Geyer",
-  "name": "rjg",
-  "description": "Installs/Configures rjg",
-  "version": "0.0.1",
-  "providing": {
-  },
-  "dependencies": {
-  },
-  "replacing": {
-  },
-  "recipes": {
-    "rjg::helloworld": "Prints hello world"
-  },
-  "groupings": {
   }
 }
