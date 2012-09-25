@@ -1,3 +1,7 @@
+rightscale_marker :begin
+
+include_recipe "rjg::helloworld"
+
 pkg_dir = "/opt/personal_capital/packages"
 pkg_file = ::File.join(pkg_dir, "foo.txt")
 
@@ -20,3 +24,5 @@ package "mysql_enterprise_backup" do
   action :nothing
   notifies :delete, "file[#{pkg_file}]", :immediately
 end
+
+rightscale_marker :end
