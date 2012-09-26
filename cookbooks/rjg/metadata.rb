@@ -13,6 +13,16 @@ recipe "rjg::helloworld", "Prints hello world"
 recipe "rjg::install_foo", "Moves foo.txt to /tmp/foo.txt"
 recipe "rjg::change_index", "Changes the /var/www/index.html content"
 
+attribute "rjg/aws_secret",
+  :display_name => "AWS SECRET",
+  :required => "required",
+  :recipes => ["rjg::helloworld"]
+ 
+attribute "rjg/aws_id",
+  :display_name => "AWS ID",
+  :required => "required",
+  :recipes => ["rjg::helloworld"]
+
 attribute "rjg/fetch_container",
   :display_name => "S3 Bucket",
   :required => "required",
