@@ -13,6 +13,16 @@ recipe "rjg::helloworld", "Prints hello world"
 recipe "rjg::install_foo", "Moves foo.txt to /tmp/foo.txt"
 recipe "rjg::change_index", "Changes the /var/www/index.html content"
 
+attribute "rjg/fetch_container",
+  :display_name => "S3 Bucket",
+  :required => "required",
+  :recipes => ["rjg::helloworld"]
+
+attribute "rjg/fetch_prefix",
+  :display_name => "S3 File Prefix",
+  :required => "required",
+  :recipes => ["rjg::helloworld"]
+
 attribute "rjg/apache_package_name",
   :display_name => "Apache Package Name",
   :description => "An override for the apache package name",

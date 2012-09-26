@@ -1,60 +1,84 @@
 {
+  "name": "rjg",
   "recipes": {
-    "rjg::change_index": "Changes the /var/www/index.html content",
+    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt",
     "rjg::helloworld": "Prints hello world",
-    "rjg::install_foo": "Moves foo.txt to /tmp/foo.txt"
+    "rjg::change_index": "Changes the /var/www/index.html content"
   },
-  "providing": {
-  },
-  "license": "All rights reserved",
-  "version": "0.0.1",
-  "description": "Installs/Configures rjg",
   "replacing": {
   },
-  "dependencies": {
-    "rightscale": ">= 0.0.0"
+  "maintainer_email": "me@ryangeyer.com",
+  "conflicting": {
   },
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
   "groupings": {
   },
   "attributes": {
     "rjg/my_name": {
+      "calculated": false,
+      "display_name": "My Name",
+      "required": "required",
       "recipes": [
         "rjg::change_index"
       ],
-      "display_name": "My Name",
-      "description": "My name for the index.html file",
-      "type": "string",
-      "required": "required",
-      "calculated": false,
       "choice": [
 
-      ]
+      ],
+      "description": "My name for the index.html file",
+      "type": "string"
     },
-    "rjg/apache_package_name": {
+    "rjg/fetch_container": {
+      "calculated": false,
+      "display_name": "S3 Bucket",
+      "required": "required",
       "recipes": [
         "rjg::helloworld"
       ],
-      "display_name": "Apache Package Name",
-      "description": "An override for the apache package name",
-      "type": "string",
-      "required": "optional",
-      "calculated": false,
-      "default": "apache2",
       "choice": [
 
-      ]
+      ],
+      "type": "string"
+    },
+    "rjg/fetch_prefix": {
+      "calculated": false,
+      "display_name": "S3 File Prefix",
+      "required": "required",
+      "recipes": [
+        "rjg::helloworld"
+      ],
+      "choice": [
+
+      ],
+      "type": "string"
+    },
+    "rjg/apache_package_name": {
+      "calculated": false,
+      "display_name": "Apache Package Name",
+      "required": "optional",
+      "recipes": [
+        "rjg::helloworld"
+      ],
+      "choice": [
+
+      ],
+      "default": "apache2",
+      "description": "An override for the apache package name",
+      "type": "string"
     }
-  },
-  "conflicting": {
-  },
-  "suggestions": {
   },
   "recommendations": {
   },
+  "maintainer": "Ryan J. Geyer",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "version": "0.0.1",
+  "suggestions": {
+  },
+  "description": "Installs/Configures rjg",
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
   "platforms": {
   },
-  "maintainer": "Ryan J. Geyer",
-  "name": "rjg",
-  "maintainer_email": "me@ryangeyer.com"
+  "providing": {
+  },
+  "license": "All rights reserved"
 }
